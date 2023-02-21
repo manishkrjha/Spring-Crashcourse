@@ -1,0 +1,18 @@
+package com.spring.jdbc;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "initiating the progam..." );
+        
+//        Requiring JDBC template object
+        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/congif.xml");
+        JDBCTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
+    
+    }
+}

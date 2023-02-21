@@ -1,0 +1,12 @@
+package com.spring.jdbc.dao;
+
+import com.spring.jdbc.entities.Student;
+
+public class StudentDaoImpl implements StudentDao{
+
+	public int insert(Student student) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
