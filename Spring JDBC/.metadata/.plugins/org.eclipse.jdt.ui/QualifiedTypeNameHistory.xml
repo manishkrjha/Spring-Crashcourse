@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.JdbcTemplate"/>
+    <fullyQualifiedTypeName name="com.spring.jdbc.dao.StudentDao"/>
+    <fullyQualifiedTypeName name="com.spring.jdbc.entities.Student"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
+</qualifiedTypeNameHistroy>

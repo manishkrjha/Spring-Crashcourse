@@ -1,6 +1,9 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -15,7 +18,11 @@ public class App
         System.out.println( "initiating the progam..." );
         
 //        Requiring JDBC template object
-        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
+        
+        
+        ApplicationContext context = new AnnotationConfigApplicationContext(configFile.class);
+        
 
 //        JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
         
@@ -52,8 +59,13 @@ public class App
 //        int res = studentDao.remove(st);
 //        System.out.println("Deleted: " +  res);
     
-        Student st = studentDao.getStudent(222);
-        System.out.println(st);
+//        Student st = studentDao.getStudent(222);
+//        System.out.println(st);
+        
+        List<Student> allStudents = studentDao.getAllStudents();
+        for(Student s: allStudents) {
+        	System.out.println(s);
+        }
     
     }
 }
